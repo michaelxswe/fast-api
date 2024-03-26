@@ -3,18 +3,18 @@ from datetime import datetime
 from pydantic import BaseModel
 
 
-class AppUserCreateModel(BaseModel):
+class UserCreateModel(BaseModel):
     username: str
     password: str
 
 
-class AppUserReadModel(BaseModel):
+class UserReadModel(BaseModel):
     id: int
     username: str
     password: str
     created_at: datetime
 
 
-class AppUserUpdateModel(BaseModel):
+class UserUpdateModel(BaseModel):
     username: str | None = None
     password: str | None = None

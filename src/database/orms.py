@@ -8,8 +8,8 @@ class Base(DeclarativeBase, MappedAsDataclass):
     pass
 
 
-class AppUserOrm(Base):
-    __tablename__ = "app_user"
+class User(Base):
+    __tablename__ = "users"
 
     id: Mapped[int] = mapped_column(INTEGER, primary_key=True, init=False, autoincrement=True)
     username: Mapped[str] = mapped_column(VARCHAR(length=25), unique=True)
