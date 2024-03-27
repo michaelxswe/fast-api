@@ -1,2 +1,0 @@
-coverage run -m pytest; coverage report; del .coverage
-pytest integration/ -s -v

@@ -10,6 +10,7 @@ from routers import user_router
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     print("Starting application")
+    app.state.database_manager.setup()
     app.state.database_manager.create_all_tables()
     yield
     app.state.database_manager.drop_all_tables()
