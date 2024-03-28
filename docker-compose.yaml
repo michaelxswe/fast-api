@@ -13,6 +13,9 @@ services:
     image: backend-image:latest
     container_name: backend-container
     command: uvicorn app:app --host 0.0.0.0 --port 80 --reload
+    environment:
+      ENV: DEV
+      DATABASE_URL: postgresql+psycopg2://postgres:1234@database:5432/test
     ports:
       - "8000:80"
     depends_on:

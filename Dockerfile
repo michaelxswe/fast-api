@@ -1,14 +1,11 @@
 FROM python:3.11.1
 
-ENV ENV DEV
-ENV DATABASE_URL postgresql+psycopg2://postgres:1234@database:5432/test
+ENV ENV PROD
+ENV DATABASE_URL REAL_DATABASE_URL
 
 WORKDIR /src
 
 COPY /src /src
-
-COPY /tests /tests
-# dev purpose
 
 COPY requirements.txt /src
 
