@@ -3,11 +3,14 @@ FROM python:3.11.1
 ENV ENV DEV
 ENV DATABASE_URL postgresql+psycopg2://postgres:1234@database:5432/test
 
-WORKDIR /app
+WORKDIR /src
 
-COPY /src /app
+COPY /src /src
 
-COPY requirements.txt /app
+COPY /tests /tests
+# dev purpose
+
+COPY requirements.txt /src
 
 RUN pip install --no-cache-dir -r requirements.txt
 
