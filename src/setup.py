@@ -27,10 +27,6 @@ def create_app(settings: Settings):
 
     @app.get("/ping")
     async def status_check():
-        return {"ping":"pong"}
+        return {"ping": "pong"}
 
     return app
-
-
-settings = Settings() # type: ignore
-app = create_app(settings=settings)

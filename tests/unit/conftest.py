@@ -1,7 +1,7 @@
 from config.settings import Settings
 from fastapi import FastAPI
 from fastapi.testclient import TestClient
-from main import create_app
+from setup import create_app
 from pytest import fixture
 from database.setup import get_database_session
 

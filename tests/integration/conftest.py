@@ -2,7 +2,7 @@ from config.settings import Settings
 from database.setup import DatabaseManager
 from fastapi import FastAPI
 from fastapi.testclient import TestClient
-from main import create_app
+from setup import create_app
 from pytest import fixture
 from database.orms import User
 
