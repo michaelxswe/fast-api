@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  unit_test:
+  unit-test:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
@@ -30,7 +30,7 @@ jobs:
           cd tests/unit/
           pytest -v --cov
 
-  integration_test:
+  integration-test:
     needs: unit_test
     runs-on: ubuntu-latest
     services:
@@ -62,7 +62,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Run integration tests
+      - name: Run tests
         env:
           ENV: Test
           DATABASE_URL: postgresql+psycopg2://postgres:1234@localhost:5432/db
