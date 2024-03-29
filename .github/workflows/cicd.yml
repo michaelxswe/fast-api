@@ -28,7 +28,7 @@ jobs:
       - name: Run tests
         run: |
           cd tests/unit/
-          pytest -v
+          pytest -v --cov
 
   integration_test:
     needs: unit_test
@@ -68,4 +68,4 @@ jobs:
           DATABASE_URL: postgresql+psycopg2://postgres:1234@localhost:5432/db
         run: |
           cd tests/integration/
-          pytest -v
+          pytest -v --cov
