@@ -65,7 +65,7 @@ jobs:
       - name: Run integration tests
         env:
           ENV: Test
-          DATABASE_URL: postgresql+psycopg2://postgres:1234@postgres:5432/db
+          DATABASE_URL: postgresql+psycopg2://postgres:1234@localhost:5432/db
         run: |
           cd tests/integration/
           pytest -v
