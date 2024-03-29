@@ -16,6 +16,7 @@ services:
     environment:
       ENV: DEV
       DATABASE_URL: postgresql+psycopg2://postgres:1234@database:5432/test
+      PYTHONDONTWRITEBYTECODE: 1
     ports:
       - "8000:80"
     depends_on:
