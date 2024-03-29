@@ -31,7 +31,7 @@ jobs:
           pytest -v --cov
 
   integration-test:
-    needs: unit_test
+    needs: unit-test
     runs-on: ubuntu-latest
     services:
       postgres:
