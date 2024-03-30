@@ -39,7 +39,7 @@ jobs:
         env:
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: 1234
-          POSTGRES_DB: db
+          POSTGRES_DB: test
         ports:
           - 5432:5432
         options: >-
@@ -65,7 +65,7 @@ jobs:
       - name: Run tests
         env:
           ENV: Test
-          DATABASE_URL: postgresql+psycopg2://postgres:1234@localhost:5432/db
+          DATABASE_URL: postgresql+psycopg2://postgres:1234@localhost:5432/test
         run: |
           cd tests/integration/
           pytest -v --cov
