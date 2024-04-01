@@ -73,4 +73,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print Secret
-        run: echo "The value of secret TEST is ${{ secrets.TEST }}"
+        run: |
+        echo "The value of secret TEST is ${{ secrets.TEST }}"
+        echo "The value of secret TESTX is ${{ secrets.TESTX }}"
