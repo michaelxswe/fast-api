@@ -69,3 +69,8 @@ jobs:
         run: |
           cd tests/integration/
           pytest -v --cov
+  print-secrets:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Secret
+        run: echo "The value of secret TEST is ${{ secrets.TEST }}"
