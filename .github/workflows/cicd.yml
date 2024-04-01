@@ -74,5 +74,5 @@ jobs:
     steps:
       - name: Print Secret
         run: |
-        echo "The value of secret TEST is ${{ secrets.TEST }}"
-        echo "The value of secret TESTX is ${{ secrets.TESTX }}"
+          echo "The value of secret TEST is ${{ secrets.TEST }}"
+          echo "The value of secret TESTX is ${{ secrets.TESTX }}"
