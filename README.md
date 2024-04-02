@@ -1,5 +1,5 @@
 ### Workflow
-(/workflow.png)
+![Workflow Diagram](/workflow.png)
 
 
 ### Setup
