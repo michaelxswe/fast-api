@@ -5,5 +5,5 @@ Resources:
   MyECRRepository:
     Type: 'AWS::ECR::Repository'
     Properties:
-      RepositoryName: Test
+      RepositoryName: test
 

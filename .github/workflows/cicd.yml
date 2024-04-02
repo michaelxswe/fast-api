@@ -88,5 +88,5 @@ jobs:
         run: |
           aws cloudformation deploy \
             --template-file infrastructure/cf.yml \
-            --stack-name my-stack-name \
+            --stack-name test-stack \
             --no-fail-on-empty-changeset \
