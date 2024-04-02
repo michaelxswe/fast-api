@@ -115,7 +115,7 @@ jobs:
           ECR_REPOSITORY: test
           IMAGE_TAG: latest
         run: |
-          ehco $ECR_REPOSITORY
+          echo $ECR_REPOSITORY
           echo $IMAGE_TAG
           echo $ECR_REGISTRY
 
